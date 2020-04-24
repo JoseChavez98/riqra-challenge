@@ -14,7 +14,9 @@ export const ConfirmationPage = (props) => {
             <OrderIdMessage>
         Your Order{' '}
         <OrderNumber>
-          P{props.location.state.orderId.padStart(4, '000')}
+          P
+          {/* {props.location.state.orderId.padStart(4, '000')} */}
+          
         </OrderNumber>{' '}
         has been registered
       </OrderIdMessage>

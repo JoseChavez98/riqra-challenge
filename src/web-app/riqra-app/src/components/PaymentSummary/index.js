@@ -106,8 +106,9 @@ export const PaymentSummary = () => {
 
   const completeOrder = () => {
     if (total >= 50) {
+      console.log("todo bien");
       mutate().then(({ data }) => {
-        navigate('/thankyou', { state: { orderId: data.createOrder.id } });
+        navigate('/confirmation', { state: { orderId: data.createOrder.id } });
       });
     }
   };

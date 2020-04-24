@@ -33,11 +33,10 @@ const GET_SEARCH_VALUE = gql`
 export const ShoppingCart = () => {
 
   const { data: result } = useQuery(GET_SEARCH_VALUE);
+  console.log(result.searchValue);
   const { data, loading, error } = useQuery(GET_PRODUCTS, {
     variables: { name: result.searchValue },
   });
-
-  console.log(loading);
 
   const { data: cart } = useQuery(GET_CART_ITEMS);
 

@@ -12,15 +12,18 @@
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "apollo-link-http": "^1.5.17",
+    "body-parser": "^1.19.0",
     "dayjs": "^1.8.25",
     "graphql": "^15.0.0",
     "graphql-language-service-parser": "^1.5.2",
+    "graphql-server-express": "^1.4.1",
     "graphql-tag": "^2.10.3",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "subscriptions-transport-ws": "^0.9.16"
   },
   "scripts": {
     "start": "react-scripts start",
