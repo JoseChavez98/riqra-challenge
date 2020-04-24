@@ -32,21 +32,13 @@ export const Quantity = styled.p`
   width: 68px;
   height: 24px;
   left: calc(50% - 68px / 2);
-  top: calc(50% - 24px / 2 + 1px);
-
-  /* h5Semibold */
-
+  top: calc(50% - 60px / 2 + 1px);
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
-
   text-align: center;
-
-  /* white */
-
   color: #ffffff;
   user-select: none;
 `;

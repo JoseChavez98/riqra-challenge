@@ -63,8 +63,8 @@ const Summary = (props) => {
   return (
     <SummaryContainer>
       <PriceLine label="Products" value={subtotal} />
-      <PriceLine label="Shipping Cost" value={shipping}  boldLabel />
-      <PriceLine label="Taxes" value={taxes} highlighted/>
+      <PriceLine label="Shipping Cost" value={shipping} boldLabel />
+      <PriceLine label="Taxes" value={taxes} highlighted />
       <PriceLine label="Total" value={total} total />
     </SummaryContainer>
   );
@@ -93,7 +93,7 @@ export const PaymentSummary = () => {
 
   const deliveryDate = getShipmentDate().toISOString();
 
-  const [mutate] = useMutation(CREATE_ORDER, {
+  const [mutate, { data }] = useMutation(CREATE_ORDER, {
     variables: {
       subtotal,
       taxes,
@@ -104,20 +104,28 @@ export const PaymentSummary = () => {
     },
   });
 
-  const completeOrder = () => {
+  const completeOrder = async () => {
     if (total >= 50) {
-      console.log("todo bien");
-      mutate().then(({ data }) => {
-        navigate('/confirmation', { state: { orderId: data.createOrder.id } });
-      });
+      console.log(mutate.orderId);
+      navigate('/confirmation',{ state: { orderId: data.createOrder.id } });
+
+      // mutate().then(({ data }) => {
+      //   navigate('/confirmation', { state: { orderId: data.createOrder.id } });
+      // })
+      // .catch((data) => {
+      //   const errors = data.graphQLErrors.map(error => error.message);
+      //   this.setState({
+      //     errors,
+      //   });
+      // });
     }
   };
   return (
     <Container>
       <Summary {...pricing} />
-      <Button total={total} onClick={completeOrder} >
+      <Button total={total} onClick={} >
         COMPLETE ORDER
       </Button>
     </Container>
   );
-};
+}

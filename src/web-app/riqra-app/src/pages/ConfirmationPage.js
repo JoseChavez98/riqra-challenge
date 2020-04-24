@@ -6,7 +6,8 @@ import { Link } from '@reach/router'
 import screen from '../media/images/screen.png'
 
 export const ConfirmationPage = (props) => {
-
+    var pId = String(props.location.state.orderId);
+    var id = pId.padStart(4, '000');
     return (
         <WrapperContainer>
             <GlobalStyle />
@@ -14,9 +15,8 @@ export const ConfirmationPage = (props) => {
             <OrderIdMessage>
         Your Order{' '}
         <OrderNumber>
-          P
-          {/* {props.location.state.orderId.padStart(4, '000')} */}
-          
+
+          P{id.padStart(4, '000')}
         </OrderNumber>{' '}
         has been registered
       </OrderIdMessage>
