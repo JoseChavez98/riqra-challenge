@@ -1,6 +1,10 @@
 import React from 'react'
 import { WrapperContainer } from '../components/Container'
 import { GlobalStyle } from '../styles/GlobalStyle'
+import {SearchProducts} from '../components/SearchProducts'
+import {ShoppingCart} from "../components/ShoppingCart"
+import {ShipmentDate} from "../components/ShipmentDate"
+import {PaymentSummary} from "../components/PaymentSummary"
 
 export const HomePage = () => {
     return (
@@ -9,7 +13,7 @@ export const HomePage = () => {
             <SearchProducts />
             <ShoppingCart />
             <ShipmentDate />
-            <PaymentSummary />
+            <PaymentSummary />  
 
         </WrapperContainer>
     )
