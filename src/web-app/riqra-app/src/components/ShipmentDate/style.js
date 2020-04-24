@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-position: relative;
+position: absolute;
 width: 270px;
 height: 24px;
 left: 589px;
-top: -355px;
+top: 128px;
 `;
 
 export const Icon = styled.div`
@@ -14,15 +14,15 @@ position: absolute;
 width: 24px;
 height: 24px;
 left: 0px;
-top: -1px;
+top: -3px;
 `;
 
 export const Text = styled.p`
-position: relative;
+position: absolute;
 width: 233px;
 height: 24px;
 left: 32px;
-top: 0px;
+top: -19px;
 font-family: Open Sans;
 font-style: normal;
 font-weight: normal;

@@ -1,22 +1,22 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
+  position: absolute;
   width: 362px;
   height: 225px;
   left: 543px;
-  top: -340px;
+  top: 168px;
 `;
 
 export const SummaryContainer = styled.div`
-  position: relative;
+  position: absolute;
   width: 360px;
   height: 150px;
   left: 0px;
   top: 0px;
   background: #ffffff;
   padding-top: 0px;
-  padding-bottom : 25px;
+  padding-bottom : 16px;
 `;
 
 export const PriceLineContainer = styled.div`
@@ -24,8 +24,7 @@ export const PriceLineContainer = styled.div`
   justify-content: space-between;
   margin: 0 16px;
   height: 24px;
-  margin-top: 0px;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   ${props =>
     props.total &&
     css`

@@ -9,7 +9,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 
 const cache = new InMemoryCache({});
 const link = new HttpLink({
-  uri: '/graphql',
+  uri: '3001/graphql',
 });
 
 const client = new ApolloClient({

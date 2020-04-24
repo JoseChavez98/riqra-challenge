@@ -63,8 +63,8 @@ const Summary = (props) => {
   return (
     <SummaryContainer>
       <PriceLine label="Products" value={subtotal} />
-      <PriceLine label="Shipping Cost" value={shipping} highlighted boldLabel />
-      <PriceLine label="Taxes" value={taxes} />
+      <PriceLine label="Shipping Cost" value={shipping}  boldLabel />
+      <PriceLine label="Taxes" value={taxes} highlighted/>
       <PriceLine label="Total" value={total} total />
     </SummaryContainer>
   );

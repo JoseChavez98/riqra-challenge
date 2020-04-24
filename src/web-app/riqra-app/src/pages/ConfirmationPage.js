@@ -11,9 +11,13 @@ export const ConfirmationPage = (props) => {
         <WrapperContainer>
             <GlobalStyle />
             <TitleMessage>Thank you!</TitleMessage>
-            <OrderIdMessage>Your order {' '}
-                <OrderNumber>P{props.location.state.orderId.padStart(4, '000')}</OrderNumber>{' '}
-            has been registered</OrderIdMessage>
+            <OrderIdMessage>
+        Your Order{' '}
+        <OrderNumber>
+          P{props.location.state.orderId.padStart(4, '000')}
+        </OrderNumber>{' '}
+        has been registered
+      </OrderIdMessage>
             <Link to='/'>
                 <BackToShoppingMessage >Continue shopping</BackToShoppingMessage>
             </Link>

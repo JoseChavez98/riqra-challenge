@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-position : relative;
+position : absolute;
 width: 380px;
   height: 500px;
   left: 125px;
-  top: 160px;
+  top: 128px;
   background: #ffffff;
+  overflow : auto;
 `;  
 
 export const Icon = styled.div`

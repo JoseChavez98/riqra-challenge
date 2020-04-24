@@ -50,7 +50,12 @@ export const ShoppingCart = () => {
   }
   if (error) {
     console.log(error);
-    return <STitleMessage>Error</STitleMessage>;
+    return( 
+    <Container>
+    <STitleMessage>Error</STitleMessage>
+    </Container>
+    )
+    ;
   }
 
   return (
