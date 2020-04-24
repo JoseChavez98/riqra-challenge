@@ -4,7 +4,7 @@ import { InputForm } from './style'
 import { useApolloClient, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-const GET_SEARCH_PRODUCTS = gql`{
+const GET_SEARCH_VALUE = gql`{
     searchValue @client
 }`;
 
@@ -12,12 +12,14 @@ export const SearchProducts = () => {
 
     const client = useApolloClient();
 
-    const { data } = useQuery(GET_SEARCH_PRODUCTS);
+    const { data } = useQuery(GET_SEARCH_VALUE);
     const { searchValue } = data;
 
     const handleChange = (props) => {
         const { value } = props.target;
-        client.writeData({ data: { searchValue: value } })
+        client.writeData({ data: { searchValue: value } 
+        
+        })
     }
 
     return (
@@ -26,4 +28,4 @@ export const SearchProducts = () => {
             onChange={handleChange}
         ></InputForm>
     )
-}
+};

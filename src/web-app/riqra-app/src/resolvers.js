@@ -1,18 +1,18 @@
 import gql from 'graphql-tag';
 
 export const typeDefs = gql`
-extend type Product {
+extend type Query {
+    items: [ID!]!
+    cartItems: [Product]
+    searchItems: [Product]
+  }
+
+  extend type Product {
     isInCart: Boolean!
     quantity: Int
     taxes: Float
     shipping: Float
     total: Float
-  }
-
-extend type Query {
-    items: [ID!]!
-    cartItems: [Product]
-    searchItems: [Product]
   }
 
   extend type Mutation {
