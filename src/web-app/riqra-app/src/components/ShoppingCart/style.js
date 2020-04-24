@@ -4,8 +4,8 @@ export const Container = styled.div`
 position : absolute;
 width: 380px;
   height: 500px;
-  left: 125px;
-  top: 128px;
+  left: 340px; 
+  top: 164px; 
   background: #ffffff;
   overflow : auto;
 `;  

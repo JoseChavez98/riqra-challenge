@@ -4,8 +4,8 @@ export const Container = styled.div`
   position: absolute;
   width: 362px;
   height: 225px;
-  left: 543px;
-  top: 168px;
+  left: 760px; 
+  top: 200px;
 `;
 
 export const SummaryContainer = styled.div`

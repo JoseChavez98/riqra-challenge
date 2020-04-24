@@ -5,8 +5,8 @@ export const Container = styled.div`
 position: absolute;
 width: 270px;
 height: 24px;
-left: 589px;
-top: 128px;
+left: 774px; 
+top: 164px;
 `;
 
 export const Icon = styled.div`

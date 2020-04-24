@@ -5,8 +5,8 @@ export const InputForm = styled.input`
 position : absolute;
 width: 380px;
   height: 50px;
-  left: 125px;
-  top: 64px;
+  left: 340px;
+  top: 100px; 
   border: 4px solid #dddddd;
   box-sizing: border-box;
   border-radius: 4px;

@@ -24,7 +24,7 @@ export const Price = styled.p`
   width: 194px;
   height: 32px;
   left: 112px;
-  top: 58px;
+  top: 43px;
 
   font-family: Open Sans;
   font-style: normal;

@@ -19,8 +19,8 @@ const GET_CART_ITEMS = gql`
   }
 `;
 
-const CREATE_ORDER = gql`
-  mutation createOrder(
+const CREATE_PURCHASE = gql`
+  mutation createPurchase(
     $subtotal: Float
     $taxes: Float
     $shipping: Float
@@ -28,7 +28,7 @@ const CREATE_ORDER = gql`
     $deliveryDate: String
     $products: [ProductId]
   ) {
-    createOrder(
+    createPurchase(
       subtotal: $subtotal
       taxes: $taxes
       shipping: $shipping
@@ -93,7 +93,7 @@ export const PaymentSummary = () => {
 
   const deliveryDate = getShipmentDate().toISOString();
 
-  const [mutate, { data }] = useMutation(CREATE_ORDER, {
+  const [mutate] = useMutation(CREATE_PURCHASE, {
     variables: {
       subtotal,
       taxes,
@@ -104,14 +104,14 @@ export const PaymentSummary = () => {
     },
   });
 
-  const completeOrder = async () => {
+  const completePurchase = async () => {
     if (total >= 50) {
-      console.log(mutate.orderId);
-      navigate('/confirmation',{ state: { orderId: data.createOrder.id } });
+      // console.log(mutate.orderId);
+      // navigate('/confirmation',{ state: { orderId: data.createOrder.id } });
 
-      // mutate().then(({ data }) => {
-      //   navigate('/confirmation', { state: { orderId: data.createOrder.id } });
-      // })
+      mutate().then(({ data }) => {
+        navigate('/confirmation', { state: { orderId: data.createPurchase.id } });
+      });
       // .catch((data) => {
       //   const errors = data.graphQLErrors.map(error => error.message);
       //   this.setState({
@@ -123,7 +123,7 @@ export const PaymentSummary = () => {
   return (
     <Container>
       <Summary {...pricing} />
-      <Button total={total} onClick={} >
+      <Button total={total} onClick={completePurchase} >
         COMPLETE ORDER
       </Button>
     </Container>
