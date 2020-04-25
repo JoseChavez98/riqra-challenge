@@ -23,7 +23,7 @@ export const TitleMessage = styled.h3`
 position: absolute;
   width: 195px;
   height: 32px;
-  left: 88px;
+  left: 90px;
   top: 210px;
   font-family: Open Sans;
   font-style: normal;
@@ -38,7 +38,7 @@ export const STitleMessage = styled.h4`
 position: absolute;
   width: 226px;
   height: 49px;
-  left: 73px;
+  left: 76px;
   top: 290px;
   font-family: Open Sans;
   font-style: normal;

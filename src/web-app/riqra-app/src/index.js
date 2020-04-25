@@ -8,7 +8,7 @@ import { typeDefs, resolvers } from './resolvers';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 
-const cache = new InMemoryCache();
+export const cache = new InMemoryCache();
 const link = new HttpLink({
   uri: 'http://localhost:3001/graphql'  
 });
@@ -22,7 +22,8 @@ const client  = new ApolloClient({
   connectToDevTools: true,
 });
 
-const initialState = {
+
+export const initialState = {
   cartItems: [],
   searchValue: '',
 };
