@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run init-db && npx nodemon --exec babel-node server.js",
+    "start": "npm run init-db && npx nodemon --exec babel-node server.js npm run set-db",
     "sequelize-skeleton": "npx sequelize init:models; npx sequelize init:config",
-    "init-db": "cd /usr/bin/ && echo 'DROP DATABASE IF EXISTS api_node_demo; CREATE DATABASE api_node_demo CHARACTER SET utf8 COLLATE utf8_general_ci; ALTER TABLE products ALTER createdAt SET DEFAULT '2020-01-01 00:00:01'; ALTER TABLE products ALTER updatedAt SET DEFAULT '2020-01-01 00:00:01'; insert into products(name,photoUrl,price,stock) values ('Yogurt Laive','https://vivanda.vteximg.com.br/arquivos/ids/178885-1000-1000/1077446005.jpg?v=636976953089200000',23.00,50); insert into products(name,photoUrl,price,stock) values ('Leche Gloria','https://wongfood.vteximg.com.br/arquivos/ids/225530-750-750/frontal-65.jpg?v=636632784126470000',13.50,20);' | ./mysql -u root -p && cd -"
+    "init-db": "cd /usr/bin/ && echo 'DROP DATABASE IF EXISTS api_node_demo; CREATE DATABASE api_node_demo CHARACTER SET utf8 COLLATE utf8_general_ci;' | ./mysql -u root -p && cd -",
+    "set-db" : "cd /usr/bin/ && echo'use api_node_demo; show tables; ALTER TABLE products ALTER createdAt SET DEFAULT '2020-01-01 00:00:01';ALTER TABLE products ALTER updatedAt SET DEFAULT '2020-01-01 00:00:01'; insert into products(name,photoUrl,price,stock) values ('Yogurt Laive','https://vivanda.vteximg.com.br/arquivos/ids/178885-1000-1000/1077446005.jpg?v=636976953089200000',23.00,50); insert into products(name,photoUrl,price,stock) values ('Leche Gloria','https://wongfood.vteximg.com.br/arquivos/ids/225530-750-750/frontal-65.jpg?v=636632784126470000',13.50,20);'"
   },
   "keywords": [],
   "author": "",
